@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #141414;
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.container .pic
+{
+    transform-style: preserve-3d;
+    animation: animate 15s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: perspective(1000px) rotateX(0deg);
+    }
+    100%
+    {
+        transform: perspective(1000px) rotateX(360deg);
+    }
+}
+.container .pic span
+{
+    position: absolute;
+    color: #ac5252;
+    font-size: 1.35em;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.76em;
+    transform: translate(-50%,-50%) rotateX(calc(var(--i) * 36deg)) translateZ(25px);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.25);
+    transform-style: preserve-3d;
+}
+.container .pic span i
+{
+    font-style: normal;
+    color: #ff76b1;
+    filter: blur(3px);
+}
+.container .pic span i:first-child:after
+{
+    content: 'I';
+    color: #d75656;
+    text-transform: lowercase;
+}
+.container .pic span i:last-child:after
+{
+    content: 'I';
+    color: #d783c2;
+    text-transform: lowercase;
+    text-shadow: -4px 0 2px #FF76B1FF;
+}
