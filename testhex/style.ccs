@@ -1,0 +1,93 @@
+body {
+  background: #333;
+}
+
+.hex {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  overflow: hidden;
+  width: 76px;
+  height: 66px;
+  transform-origin: 50% 50% 50%;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+  cursor: pointer;
+}
+
+.lean-top {
+  transform: rotateX(45deg);    
+}
+
+.lean-top .tri {
+  border-bottom: 34px solid #9d9;
+}
+
+.lean-top-right {
+  transform: rotateX(25deg) rotateY(25deg);    
+}
+
+.lean-top-right .tri {
+  border-bottom: 34px solid #7fd47f;
+}
+
+.lean-top-left {
+  transform: rotateX(25deg) rotateY(-25deg);    
+}
+
+.lean-top-left .tri {
+  border-bottom: 34px solid #7fd47f;
+}
+
+.lean-bottom {
+  transform: rotateX(-45deg);    
+}
+
+.lean-bottom .tri {
+  border-bottom: 34px solid #37a637;
+}
+
+.lean-bottom-right {
+  transform: rotateX(-25deg) rotateY(25deg);  
+}
+
+.lean-bottom-right .tri {
+  border-bottom: 34px solid #4dc44d;
+}
+
+.lean-bottom-left {
+  transform: rotateX(-25deg) rotateY(-25deg);  
+}
+
+.lean-bottom-left .tri {
+  border-bottom: 34px solid #4dc44d;
+}
+
+.tri {
+  position: absolute;
+  top: 32px;
+  left: 18px;
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 34px solid #6C6;
+  transform-origin: 20px 1px;
+  transition: border-color 0.5s ease-out;
+}
+
+.r-60 {
+  transform: rotate(60deg);
+}
+.r-120 {
+  transform: rotate(120deg);
+}
+.r-180 {
+  transform: rotate(180deg);
+}
+.r-240 {
+  transform: rotate(240deg);
+}
+.r-300 {
+  transform: rotate(300deg);
+}
